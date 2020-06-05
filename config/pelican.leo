@@ -333,17 +333,7 @@ Author: zyan
 
 &lt;!-- PELICAN_END_SUMMARY --&gt;
 
-W12
-Leo Editor 與 Pelican blog 使用說明影片
-
-W13
 Pelican Blog 內容與 Google Blogger 同步
-
-W13  利用 Leo Editor 按鈕處理同步說明影片
-
-教學影片-2
-
-教學影片-3
 
 利用 Windows 10 設定 -&gt; 選擇預設網頁瀏覽器, 使用 Google Chrome 作為預設瀏覽器.
 

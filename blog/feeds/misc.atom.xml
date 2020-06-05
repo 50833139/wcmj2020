@@ -3,13 +3,7 @@
 </summary><content type="html">&lt;p&gt;五專網際內容管理W12-W13&lt;/p&gt;
 
 
-&lt;p&gt;W12
-Leo Editor 與 Pelican blog 使用說明影片&lt;/p&gt;
-&lt;p&gt;W13
-Pelican Blog 內容與 Google Blogger 同步&lt;/p&gt;
-&lt;p&gt;W13  利用 Leo Editor 按鈕處理同步說明影片&lt;/p&gt;
-&lt;p&gt;教學影片-2&lt;/p&gt;
-&lt;p&gt;教學影片-3&lt;/p&gt;
+&lt;p&gt;Pelican Blog 內容與 Google Blogger 同步&lt;/p&gt;
 &lt;p&gt;利用 Windows 10 設定 -&amp;gt; 選擇預設網頁瀏覽器, 使用 Google Chrome 作為預設瀏覽器.&lt;/p&gt;
 &lt;p&gt;隨身程式系統必須安裝 google-api-python-client 與 oauth2client&lt;/p&gt;
 &lt;p&gt;pip install google-api-python-client oauth2client&lt;/p&gt;
