@@ -64,10 +64,10 @@
 </v>
 <v t="leo.20170710022054.1"><vh>可以另建節點存放 markdown 目錄下的 md 檔案</vh></v>
 <v t="leo.20170710022041.1"><vh>@path markdown</vh>
-<v t="leo.20180115115910.1"><vh>2018</vh>
-<v t="leo.20180423103639.1"><vh>2018 Fall CP 課程</vh>
-<v t="leo.20200605153624.1"><vh>@edit 20200605.md</vh></v>
-</v>
+<v t="leo.20180115115910.1"><vh>2020</vh>
+<v t="leo.20200605153624.1"><vh>@clean 20200605.md</vh></v>
+<v t="leo.20200605161634.1"><vh>@clean 20200605-2.md</vh></v>
+<v t="leo.20200605162128.1"><vh>@clean 20200605-3.md</vh></v>
 </v>
 </v>
 <v t="yen.20170108171733.83"><vh>產生 .key 與 .crt 指令</vh></v>
@@ -101,7 +101,45 @@ g.es("admin pelican Github 執行完畢")
 <t tx="leo.20180115093726.1"></t>
 <t tx="leo.20180115115910.1"></t>
 <t tx="leo.20180115142025.1"></t>
-<t tx="leo.20180423103639.1"></t>
+<t tx="leo.20200605153624.1">@language md
+---
+Title: 電腦硬體
+Date: 2020-06-05
+Category: Misc
+Tags: PChardware
+Slug: PC_hardware
+Author: zyan
+---
+
+我真的不知道可以打什麼我才打這篇
+
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+主機板
+----
+
+主機板是使 PC 運作的核心。位於其上的 CPU 是所有其他硬體運作的樞紐。主機板好比大腦，將電源配送至需要的地方，與其他所有元件溝通協調，是電腦中最重要的硬體之一。
+
+RAM
+----
+
+隨機存取記憶體或 RAM，是指一種安裝在主機板記憶體插槽內的硬體。RAM 的作用是暫時儲存由程式建立的使用中資訊，如此一來這些資料即可立即存取。
+
+硬碟
+----
+
+硬碟是一種儲存裝置，負責儲存永久性和暫時性資料。這些資料有諸多形式，但基本上是將其儲存或安裝至電腦中，例如電腦程式、家庭照片、作業系統、文書處理文件等等。
+有兩種不同類型的儲存裝置：傳統硬碟（HDD）和較新的固態硬碟（SSD）。傳統硬碟透過在高速旋轉磁碟（稱之為碟片）上寫入二進位資料，而固態硬碟透過靜態快閃記憶體晶片儲存資料。
+
+GPU
+----
+
+GPU 如其名所述，負責處理大量批次的圖像資料，對 3D 算圖尤其重要。您會發現電腦的顯示卡至少有一個 GPU。與 PC 主機板所提供的基本內建顯示功能相反，專用顯示卡介面透過擴充插槽來與主機板連接，幾乎專為顯示算圖所用。這也表示若您想提升一些 PC 效能，可以透過升級顯示卡來完成。
+
+PSU
+----
+
+電源供應器通常縮寫成 PSU，其作用不僅是為電腦供電而已。此為電力從外部電源進入系統的切入點，並從主機板分配給各個硬體元件。不過，並非所有電源供應器皆相同，若 PSU 沒有足夠的瓦數，您的系統將無法正常運作。</t>
 <t tx="leo.20200605155311.1">@language python
 from markdown import markdown
 from oauth2client import client
@@ -281,6 +319,85 @@ try:
 except(client.AccessTokenRefreshError):
     g.es("error")
 </t>
+<t tx="leo.20200605161634.1">@language md
+---
+Title: 網路管理課程W12-W13
+Date: 2020-06-05
+Category: Misc
+Tags: NetworkManagementW12W13
+Slug: Network_ManagementW12W13
+Author: zyan
+---
+
+五專網際內容管理W12-W13
+
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+W12
+Leo Editor 與 Pelican blog 使用說明影片
+
+W13
+Pelican Blog 內容與 Google Blogger 同步
+
+W13  利用 Leo Editor 按鈕處理同步說明影片
+
+教學影片-2
+
+教學影片-3
+
+利用 Windows 10 設定 -&gt; 選擇預設網頁瀏覽器, 使用 Google Chrome 作為預設瀏覽器.
+
+隨身程式系統必須安裝 google-api-python-client 與 oauth2client
+
+pip install google-api-python-client oauth2client
+
+OAuth 2.0 client IDs 程式類別可以選擇 Desktop app
+
+使用者完成 client_secrets.json 設定後, 必須將檔案存在倉儲目錄外部
+
+將 client_secrets.json 轉為 credential_token.dat 的程式</t>
+<t tx="leo.20200605162128.1">@language md
+---
+Title: 網路管理課程W14
+Date: 2020-06-05
+Category: Misc
+Tags: NetworkManagementW14
+Slug: Network_ManagementW14
+Author: zyan
+---
+
+五專網際內容管理W14
+
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+直接在操作系統建立網際內容管理合用系統
+
+Windows 10 64 位元操作系統
+
+安裝 Python 3.8.3 與 pip
+
+安裝 Git
+
+    利用 64-bit Git for Windows Setup 安裝 Git 工具.
+
+安裝 CMSiMDE 所需模組
+
+    利用 cmd 開啟命令列視窗, 以 pip 安裝 flask flask_cors lxml bs4 markdown pelican leo 等模組
+
+        pip install  flask flask_cors lxml bs4 markdown pelican leo
+
+Ubuntu 20.04 操作系統 (請下載 W12 Virtualbox 虛擬主機檔案)
+
+    Ubuntu 20.04 同時存在 Python 2.7 與 Python 3.8.2,  CMSiMDE 只相容於 Python 3.8.2, 因此啟動指令必須使用:
+        python3 wsgi.py
+
+        與 
+
+        pip3 install  flask flask_cors lxml bs4 markdown pelican leo
+
+Mac OS X 操作系統
+
+    與 Ubuntu 20.04 類似.</t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
