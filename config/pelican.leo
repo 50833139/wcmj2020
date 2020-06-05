@@ -378,26 +378,26 @@ Windows 10 64 位元操作系統
 
 安裝 Git
 
-    利用 64-bit Git for Windows Setup 安裝 Git 工具.
+利用 64-bit Git for Windows Setup 安裝 Git 工具.
 
 安裝 CMSiMDE 所需模組
 
-    利用 cmd 開啟命令列視窗, 以 pip 安裝 flask flask_cors lxml bs4 markdown pelican leo 等模組
+利用 cmd 開啟命令列視窗, 以 pip 安裝 flask flask_cors lxml bs4 markdown pelican leo 等模組
 
-        pip install  flask flask_cors lxml bs4 markdown pelican leo
+pip install  flask flask_cors lxml bs4 markdown pelican leo
 
 Ubuntu 20.04 操作系統 (請下載 W12 Virtualbox 虛擬主機檔案)
 
-    Ubuntu 20.04 同時存在 Python 2.7 與 Python 3.8.2,  CMSiMDE 只相容於 Python 3.8.2, 因此啟動指令必須使用:
-        python3 wsgi.py
+Ubuntu 20.04 同時存在 Python 2.7 與 Python 3.8.2,  CMSiMDE 只相容於 Python 3.8.2, 因此啟動指令必須使用:
+python3 wsgi.py
 
-        與 
+與 
 
-        pip3 install  flask flask_cors lxml bs4 markdown pelican leo
+pip3 install  flask flask_cors lxml bs4 markdown pelican leo
 
 Mac OS X 操作系統
 
-    與 Ubuntu 20.04 類似.</t>
+與 Ubuntu 20.04 類似.</t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/

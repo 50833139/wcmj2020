@@ -23,30 +23,17 @@ Pelican Blog 內容與 Google Blogger 同步&lt;/p&gt;
 &lt;p&gt;Windows 10 64 位元操作系統&lt;/p&gt;
 &lt;p&gt;安裝 Python 3.8.3 與 pip&lt;/p&gt;
 &lt;p&gt;安裝 Git&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;利用 64-bit Git for Windows Setup 安裝 Git 工具.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;p&gt;利用 64-bit Git for Windows Setup 安裝 Git 工具.&lt;/p&gt;
 &lt;p&gt;安裝 CMSiMDE 所需模組&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;利用&lt;/span&gt; &lt;span class="n"&gt;cmd&lt;/span&gt; &lt;span class="err"&gt;開啟命令列視窗&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;以&lt;/span&gt; &lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="err"&gt;安裝&lt;/span&gt; &lt;span class="n"&gt;flask&lt;/span&gt; &lt;span class="n"&gt;flask_cors&lt;/span&gt; &lt;span class="n"&gt;lxml&lt;/span&gt; &lt;span class="n"&gt;bs4&lt;/span&gt; &lt;span class="n"&gt;markdown&lt;/span&gt; &lt;span class="n"&gt;pelican&lt;/span&gt; &lt;span class="n"&gt;leo&lt;/span&gt; &lt;span class="err"&gt;等模組&lt;/span&gt;
-
-    &lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt;  &lt;span class="n"&gt;flask&lt;/span&gt; &lt;span class="n"&gt;flask_cors&lt;/span&gt; &lt;span class="n"&gt;lxml&lt;/span&gt; &lt;span class="n"&gt;bs4&lt;/span&gt; &lt;span class="n"&gt;markdown&lt;/span&gt; &lt;span class="n"&gt;pelican&lt;/span&gt; &lt;span class="n"&gt;leo&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;p&gt;利用 cmd 開啟命令列視窗, 以 pip 安裝 flask flask_cors lxml bs4 markdown pelican leo 等模組&lt;/p&gt;
+&lt;p&gt;pip install  flask flask_cors lxml bs4 markdown pelican leo&lt;/p&gt;
 &lt;p&gt;Ubuntu 20.04 操作系統 (請下載 W12 Virtualbox 虛擬主機檔案)&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Ubuntu&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;04&lt;/span&gt; &lt;span class="err"&gt;同時存在&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt; &lt;span class="err"&gt;與&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="n"&gt;CMSiMDE&lt;/span&gt; &lt;span class="err"&gt;只相容於&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;因此啟動指令必須使用&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="n"&gt;python3&lt;/span&gt; &lt;span class="n"&gt;wsgi&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
-
-    &lt;span class="err"&gt;與&lt;/span&gt;
-
-    &lt;span class="n"&gt;pip3&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt;  &lt;span class="n"&gt;flask&lt;/span&gt; &lt;span class="n"&gt;flask_cors&lt;/span&gt; &lt;span class="n"&gt;lxml&lt;/span&gt; &lt;span class="n"&gt;bs4&lt;/span&gt; &lt;span class="n"&gt;markdown&lt;/span&gt; &lt;span class="n"&gt;pelican&lt;/span&gt; &lt;span class="n"&gt;leo&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;p&gt;Ubuntu 20.04 同時存在 Python 2.7 與 Python 3.8.2,  CMSiMDE 只相容於 Python 3.8.2, 因此啟動指令必須使用:
+python3 wsgi.py&lt;/p&gt;
+&lt;p&gt;與 &lt;/p&gt;
+&lt;p&gt;pip3 install  flask flask_cors lxml bs4 markdown pelican leo&lt;/p&gt;
 &lt;p&gt;Mac OS X 操作系統&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;與 Ubuntu 20.04 類似.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Misc"></category><category term="NetworkManagementW14"></category></entry><entry><title>電腦硬體</title><link href=".%5CPC_hardware.html" rel="alternate"></link><published>2020-06-05T00:00:00+08:00</published><updated>2020-06-05T00:00:00+08:00</updated><author><name>zyan</name></author><id>tag:None,2020-06-05:.\PC_hardware.html</id><summary type="html">&lt;p&gt;我真的不知道可以打什麼我才打這篇&lt;/p&gt;
+&lt;p&gt;與 Ubuntu 20.04 類似.&lt;/p&gt;</content><category term="Misc"></category><category term="NetworkManagementW14"></category></entry><entry><title>電腦硬體</title><link href=".%5CPC_hardware.html" rel="alternate"></link><published>2020-06-05T00:00:00+08:00</published><updated>2020-06-05T00:00:00+08:00</updated><author><name>zyan</name></author><id>tag:None,2020-06-05:.\PC_hardware.html</id><summary type="html">&lt;p&gt;我真的不知道可以打什麼我才打這篇&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;我真的不知道可以打什麼我才打這篇&lt;/p&gt;
 
 
