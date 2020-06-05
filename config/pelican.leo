@@ -355,7 +355,32 @@ OAuth 2.0 client IDs 程式類別可以選擇 Desktop app
 
 使用者完成 client_secrets.json 設定後, 必須將檔案存在倉儲目錄外部
 
-將 client_secrets.json 轉為 credential_token.dat 的程式</t>
+將 client_secrets.json 轉為 credential_token.dat 的程式:
+
+    @language python
+    # https://developers.google.com/blogger/docs/3.0/using
+    # under Mac command + b to execute
+    import pickle
+    import os
+    from googleapiclient.discovery import build
+    from google_auth_oauthlib.flow import InstalledAppFlow
+ 
+ 
+    SCOPES = ['https://www.googleapis.com/auth/blogger', ]
+ 
+    # we check if the file tBo store the credentials exists
+    if not os.path.exists('./../../yen_gm_blogger_token.dat'):
+ 
+        flow = InstalledAppFlow.from_client_secrets_file('./../../yen_gm_blogger_secrets.json', SCOPES)
+        credentials = flow.run_local_server()
+ 
+        with open('./../../yen_gm_blogger_token.dat', 'wb') as credentials_dat:
+            pickle.dump(credentials, credentials_dat)
+    else:
+        with open('./../../yen_gm_blogger_token.dat', 'rb') as credentials_dat:
+            credentials = pickle.load(credentials_dat)
+    service = build('blogger', 'v3', credentials=credentials)
+    g.es(service)</t>
 <t tx="leo.20200605162128.1">@language md
 ---
 Title: 網路管理課程W14
@@ -370,34 +395,65 @@ Author: zyan
 
 &lt;!-- PELICAN_END_SUMMARY --&gt;
 
-直接在操作系統建立網際內容管理合用系統
+新增 blogger 文章
+----
 
-Windows 10 64 位元操作系統
+    '''
+    用來測試 Google Blogger Python API 新增文章程式
 
-安裝 Python 3.8.3 與 pip
+    pip install google-api-python-client oauth2client
 
-安裝 Git
+    '''
 
-利用 64-bit Git for Windows Setup 安裝 Git 工具.
+    import sys
+    from oauth2client import client
+    from googleapiclient import sample_tools
 
-安裝 CMSiMDE 所需模組
+    argv = ""
+    # 認證並建立服務
+    service, flags = sample_tools.init(
+        argv, 'blogger', 'v3', __doc__, './client_secrets.json',
+        scope='https://www.googleapis.com/auth/blogger')
 
-利用 cmd 開啟命令列視窗, 以 pip 安裝 flask flask_cors lxml bs4 markdown pelican leo 等模組
-
-pip install  flask flask_cors lxml bs4 markdown pelican leo
-
-Ubuntu 20.04 操作系統 (請下載 W12 Virtualbox 虛擬主機檔案)
-
-Ubuntu 20.04 同時存在 Python 2.7 與 Python 3.8.2,  CMSiMDE 只相容於 Python 3.8.2, 因此啟動指令必須使用:
-python3 wsgi.py
-
-與 
-
-pip3 install  flask flask_cors lxml bs4 markdown pelican leo
-
-Mac OS X 操作系統
-
-與 Ubuntu 20.04 類似.</t>
+    try:
+        users = service.users()
+        # 取得使用者 profile 資料
+        user = users.get(userId='self').execute()
+        print('網誌名稱: %s' % user['displayName'])
+        blogs = service.blogs()
+        # 取得使用者所建立網誌名稱
+        blogs = blogs.listByUser(userId='self').execute()
+        for blog in blogs['items']:
+        print(blog['name'], blog['url'])
+        posts = service.posts()
+        # 新增網誌 post 時, 需要 blog id
+ 
+        body = {
+        "kind": "blogger#post",
+        "id": "123",
+        "title": "透過 Python 程式新增網誌文章1",
+        "content":"使用 Google Blogger API 可以利用程式新增網誌文章內容1"
+        }
+     
+        insert = posts.insert(blogId='123', body=body)
+        posts_doc = insert.execute()
+        print(posts_doc)
+     
+        '''
+        # 更新網誌文章時的 body
+        body = {
+        "kind": "blogger#post",
+        "title": "透過 Python 程式修改網誌文章2",
+        "content": "使用 Google Blogger API 可以利用程式修改網誌文章內容. http://mde.tw/cd2019"
+        }
+     
+        update = posts.update(blogId="123", postId="456", body=body, publish=True)
+        update_doc = update.execute()
+        print(update_doc)
+        '''
+    except(client.AccessTokenRefreshError):
+        print("error")
+</t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
