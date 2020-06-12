@@ -223,27 +223,22 @@ init_mathjax();
         <article class="post">
         <div class="inner">
             <section class="post-content">
-                <p>五專網際內容管理W14</p>
+                <p>五專網際內容管理W14
 
-
-<h2>新增 blogger 文章</h2>
+新增 blogger 文章</p>
+<hr>
 <div class="highlight"><pre><span></span><code><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">用來測試 Google Blogger Python API 新增文章程式</span>
-
 <span class="sd">pip install google-api-python-client oauth2client</span>
-
 <span class="sd">&#39;&#39;&#39;</span>
-
 <span class="kn">import</span> <span class="nn">sys</span>
 <span class="kn">from</span> <span class="nn">oauth2client</span> <span class="kn">import</span> <span class="n">client</span>
 <span class="kn">from</span> <span class="nn">googleapiclient</span> <span class="kn">import</span> <span class="n">sample_tools</span>
-
 <span class="n">argv</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 <span class="c1"># 認證並建立服務</span>
 <span class="n">service</span><span class="p">,</span> <span class="n">flags</span> <span class="o">=</span> <span class="n">sample_tools</span><span class="o">.</span><span class="n">init</span><span class="p">(</span>
     <span class="n">argv</span><span class="p">,</span> <span class="s1">&#39;blogger&#39;</span><span class="p">,</span> <span class="s1">&#39;v3&#39;</span><span class="p">,</span> <span class="vm">__doc__</span><span class="p">,</span> <span class="s1">&#39;./client_secrets.json&#39;</span><span class="p">,</span>
     <span class="n">scope</span><span class="o">=</span><span class="s1">&#39;https://www.googleapis.com/auth/blogger&#39;</span><span class="p">)</span>
-
 <span class="k">try</span><span class="p">:</span>
     <span class="n">users</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="n">users</span><span class="p">()</span>
     <span class="c1"># 取得使用者 profile 資料</span>
@@ -256,18 +251,15 @@ init_mathjax();
     <span class="k">print</span><span class="p">(</span><span class="n">blog</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span> <span class="n">blog</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">])</span>
     <span class="n">posts</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="n">posts</span><span class="p">()</span>
     <span class="c1"># 新增網誌 post 時, 需要 blog id</span>
-
     <span class="n">body</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;blogger#post&quot;</span><span class="p">,</span>
     <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;123&quot;</span><span class="p">,</span>
     <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;透過 Python 程式新增網誌文章1&quot;</span><span class="p">,</span>
     <span class="s2">&quot;content&quot;</span><span class="p">:</span><span class="s2">&quot;使用 Google Blogger API 可以利用程式新增網誌文章內容1&quot;</span>
     <span class="p">}</span>
-
     <span class="n">insert</span> <span class="o">=</span> <span class="n">posts</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">blogId</span><span class="o">=</span><span class="s1">&#39;123&#39;</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="n">body</span><span class="p">)</span>
     <span class="n">posts_doc</span> <span class="o">=</span> <span class="n">insert</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
     <span class="k">print</span><span class="p">(</span><span class="n">posts_doc</span><span class="p">)</span>
-
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    # 更新網誌文章時的 body</span>
 <span class="sd">    body = {</span>
@@ -275,7 +267,6 @@ init_mathjax();
 <span class="sd">    &quot;title&quot;: &quot;透過 Python 程式修改網誌文章2&quot;,</span>
 <span class="sd">    &quot;content&quot;: &quot;使用 Google Blogger API 可以利用程式修改網誌文章內容. http://mde.tw/cd2019&quot;</span>
 <span class="sd">    }</span>
-
 <span class="sd">    update = posts.update(blogId=&quot;123&quot;, postId=&quot;456&quot;, body=body, publish=True)</span>
 <span class="sd">    update_doc = update.execute()</span>
 <span class="sd">    print(update_doc)</span>

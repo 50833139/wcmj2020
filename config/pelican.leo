@@ -39,15 +39,6 @@
 <v t="leo.20180115093726.1"><vh>@path partials</vh>
 <v t="leo.20180115093749.1"><vh>@edit navigation.html</vh></v>
 </v>
-<v t="leo.20180115142025.1"><vh>保留之前舊的設定檔案</vh></v>
-</v>
-<v t="yen.20170224232341.2"><vh>@path theme/pelican-bootstrap3_local/templates</vh>
-<v t="yen.20170224232341.3"><vh>@edit base.html</vh></v>
-</v>
-<v t="leo.20170710015301.1"><vh>@path theme/pelican-bootstrap3/templates</vh>
-<v t="leo.20170710015311.1"><vh>@edit search.html</vh></v>
-<v t="leo.20170710095845.1"><vh>@edit base.html</vh></v>
-<v t="leo.20170710101854.1"><vh>@edit article.html</vh></v>
 </v>
 </v>
 <v t="leo.20170710015511.1"><vh>編輯 plugin</vh>
@@ -62,12 +53,20 @@
 <v t="yen.20170108171733.82"><vh>@edit pages_1.md</vh></v>
 </v>
 </v>
-<v t="leo.20170710022054.1"><vh>可以另建節點存放 markdown 目錄下的 md 檔案</vh></v>
 <v t="leo.20170710022041.1"><vh>@path markdown</vh>
 <v t="leo.20180115115910.1"><vh>2020</vh>
-<v t="leo.20200605153624.1"><vh>@clean 20200605.md</vh></v>
-<v t="leo.20200605161634.1"><vh>@clean 20200605-2.md</vh></v>
-<v t="leo.20200605162128.1"><vh>@clean 20200605-3.md</vh></v>
+<v t="leo.20200605153624.1"><vh>@clean 20200605.39.1.md</vh>
+<v t="leo.20200612135945.1"><vh>電腦硬體</vh></v>
+<v t="leo.20200612151816.1"><vh>8379103658440880990</vh></v>
+</v>
+<v t="leo.20200605161634.1"><vh>@clean 20200605.39.2.md</vh>
+<v t="leo.20200612140045.1"><vh>網路管理課程W12-W13</vh></v>
+<v t="leo.20200612071844.1"><vh>3886295266506998332</vh></v>
+</v>
+<v t="leo.20200605162128.1"><vh>@clean 20200605.39.3.md</vh>
+<v t="leo.20200612140120.1"><vh>網路管理課程W14</vh></v>
+<v t="leo.20200612071937.1"><vh>6383690332952130761</vh></v>
+</v>
 </v>
 </v>
 <v t="yen.20170108171733.83"><vh>產生 .key 與 .crt 指令</vh></v>
@@ -89,73 +88,44 @@ g.es("admin pelican Github 執行完畢")
 
 
 </t>
-<t tx="leo.20170710015301.1"></t>
 <t tx="leo.20170710015511.1"></t>
 <t tx="leo.20170710015523.1"></t>
 <t tx="leo.20170710015523.2"></t>
 <t tx="leo.20170710022041.1"></t>
-<t tx="leo.20170710022054.1"></t>
 <t tx="leo.20170908162839.1"></t>
 <t tx="leo.20170908162904.1"></t>
 <t tx="leo.20180115093448.1"></t>
 <t tx="leo.20180115093726.1"></t>
 <t tx="leo.20180115115910.1"></t>
-<t tx="leo.20180115142025.1"></t>
 <t tx="leo.20200605153624.1">@language md
 ---
 Title: 電腦硬體
 Date: 2020-06-05
 Category: Misc
-Tags: PChardware
-Slug: PC_hardware
+Tags:PChardware
+Slug:PC_hardware
 Author: zyan
 ---
-
 我真的不知道可以打什麼我才打這篇
-
 &lt;!-- PELICAN_END_SUMMARY --&gt;
-
-主機板
-----
-
-主機板是使 PC 運作的核心。位於其上的 CPU 是所有其他硬體運作的樞紐。主機板好比大腦，將電源配送至需要的地方，與其他所有元件溝通協調，是電腦中最重要的硬體之一。
-
-RAM
-----
-
-隨機存取記憶體或 RAM，是指一種安裝在主機板記憶體插槽內的硬體。RAM 的作用是暫時儲存由程式建立的使用中資訊，如此一來這些資料即可立即存取。
-
-硬碟
-----
-
-硬碟是一種儲存裝置，負責儲存永久性和暫時性資料。這些資料有諸多形式，但基本上是將其儲存或安裝至電腦中，例如電腦程式、家庭照片、作業系統、文書處理文件等等。
-有兩種不同類型的儲存裝置：傳統硬碟（HDD）和較新的固態硬碟（SSD）。傳統硬碟透過在高速旋轉磁碟（稱之為碟片）上寫入二進位資料，而固態硬碟透過靜態快閃記憶體晶片儲存資料。
-
-GPU
-----
-
-GPU 如其名所述，負責處理大量批次的圖像資料，對 3D 算圖尤其重要。您會發現電腦的顯示卡至少有一個 GPU。與 PC 主機板所提供的基本內建顯示功能相反，專用顯示卡介面透過擴充插槽來與主機板連接，幾乎專為顯示算圖所用。這也表示若您想提升一些 PC 效能，可以透過升級顯示卡來完成。
-
-PSU
-----
-
-電源供應器通常縮寫成 PSU，其作用不僅是為電腦供電而已。此為電力從外部電源進入系統的切入點，並從主機板分配給各個硬體元件。不過，並非所有電源供應器皆相同，若 PSU 沒有足夠的瓦數，您的系統將無法正常運作。</t>
+@others</t>
 <t tx="leo.20200605155311.1">@language python
 from markdown import markdown
 from oauth2client import client
-#from googleapiclient import sample_tools
+from googleapiclient import sample_tools
 import os
-# 配合使用 credential token
-import pickle
-from googleapiclient.discovery import build
-#from google_auth_oauthlib.flow import InstalledAppFlow
-#from google.auth.transport.requests import Request
- 
+
 os.environ['TZ'] = 'Asia/Taipei'
-with open('./../../blogger_credentials.dat', 'rb') as credentials_dat:
-    credentials = pickle.load(credentials_dat)
-service = build('blogger', 'v3', credentials=credentials)
- 
+argv = ""
+# 認證並建立服務
+# name of the api is "blogger", version is "v3"
+# description of the api is __doc__
+# file name of the application: location of client_secrets.json
+service, flags = sample_tools.init(
+  argv, 'blogger', 'v3', __doc__, "./../../client_secrets.json",
+  scope='https://www.googleapis.com/auth/blogger')
+
+
 def get_cat_tag_content(data):
     # 請注意, 因為 data 來自 .md 的檔案 內容, 第1行為 ---
     # 用跳行符號分割
@@ -175,7 +145,7 @@ def get_cat_tag_content(data):
     #content = content.replace('~~~python', '[code lang="python"]')
     #content = content.replace('~~~', '[/code]')
     return title, category, tags, content
- 
+
 # 從目前所在節點的 body pan 中取出類別, tags 以及文章內容
 # p.h 為 @clean filename.md
 # 因為要使用 @clean 節點掛上為後的 blogger post_id, 因此改為讀 .md 檔案
@@ -195,7 +165,7 @@ content = markdown(content)
 content = content.replace("&lt;h2&gt;", "&lt;h2&gt;&lt;font size='4'&gt;")
 content = content.replace("&lt;/h2&gt;", "&lt;/font&gt;&lt;/h2&gt;")
 # g.es(content)
- 
+
 try:
     '''
     users = service.users()
@@ -224,8 +194,7 @@ try:
     posts_doc = insert.execute()
     post_id = posts_doc["id"]
     #print(posts_doc)
-    # 改用 credential token 後不會產生 blogger.dat
-    #os.remove("blogger.dat")
+    os.remove("blogger.dat")
     # 利用最後的 child 節點來儲存 post_id
     to_save_post_id = p.insertAsLastChild()   
     # 改為內文為空的節點, id 直接標在 head 標題 
@@ -236,7 +205,8 @@ try:
     g.es("post_id 為", post_id)
     g.es("已經將資料送往 Blogger!")
 except(client.AccessTokenRefreshError):
-    g.es("error")</t>
+    g.es("error")
+</t>
 <t tx="leo.20200605155312.1">@language python
 from markdown import markdown
 from oauth2client import client
@@ -328,12 +298,40 @@ Tags: NetworkManagementW12W13
 Slug: Network_ManagementW12W13
 Author: zyan
 ---
-
 五專網際內容管理W12-W13
-
 &lt;!-- PELICAN_END_SUMMARY --&gt;
-
-Pelican Blog 內容與 Google Blogger 同步
+@others</t>
+<t tx="leo.20200605162128.1">@language md
+---
+Title: 網路管理課程W14
+Date: 2020-06-05
+Category: Misc
+Tags: NetworkManagementW14
+Slug: Network_ManagementW14
+Author: zyan
+---
+五專網際內容管理W14
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+@others</t>
+<t tx="leo.20200612071844.1"></t>
+<t tx="leo.20200612071937.1"></t>
+<t tx="leo.20200612135945.1">主機板
+----
+主機板是使 PC 運作的核心。位於其上的 CPU 是所有其他硬體運作的樞紐。主機板好比大腦，將電源配送至需要的地方，與其他所有元件溝通協調，是電腦中最重要的硬體之一。
+RAM
+----
+隨機存取記憶體或 RAM，是指一種安裝在主機板記憶體插槽內的硬體。RAM 的作用是暫時儲存由程式建立的使用中資訊，如此一來這些資料即可立即存取。
+硬碟
+----
+硬碟是一種儲存裝置，負責儲存永久性和暫時性資料。這些資料有諸多形式，但基本上是將其儲存或安裝至電腦中，例如電腦程式、家庭照片、作業系統、文書處理文件等等。
+有兩種不同類型的儲存裝置：傳統硬碟（HDD）和較新的固態硬碟（SSD）。傳統硬碟透過在高速旋轉磁碟（稱之為碟片）上寫入二進位資料，而固態硬碟透過靜態快閃記憶體晶片儲存資料。
+GPU
+----
+GPU 如其名所述，負責處理大量批次的圖像資料，對 3D 算圖尤其重要。您會發現電腦的顯示卡至少有一個 GPU。與 PC 主機板所提供的基本內建顯示功能相反，專用顯示卡介面透過擴充插槽來與主機板連接，幾乎專為顯示算圖所用。這也表示若您想提升一些 PC 效能，可以透過升級顯示卡來完成。
+PSU
+----
+電源供應器通常縮寫成 PSU，其作用不僅是為電腦供電而已。此為電力從外部電源進入系統的切入點，並從主機板分配給各個硬體元件。不過，並非所有電源供應器皆相同，若 PSU 沒有足夠的瓦數，您的系統將無法正常運作。</t>
+<t tx="leo.20200612140045.1">Pelican Blog 內容與 Google Blogger 同步
 
 利用 Windows 10 設定 -&gt; 選擇預設網頁瀏覽器, 使用 Google Chrome 作為預設瀏覽器.
 
@@ -347,23 +345,17 @@ OAuth 2.0 client IDs 程式類別可以選擇 Desktop app
 
 將 client_secrets.json 轉為 credential_token.dat 的程式:
 
-    @language python
     # https://developers.google.com/blogger/docs/3.0/using
     # under Mac command + b to execute
     import pickle
     import os
     from googleapiclient.discovery import build
     from google_auth_oauthlib.flow import InstalledAppFlow
- 
- 
     SCOPES = ['https://www.googleapis.com/auth/blogger', ]
- 
     # we check if the file tBo store the credentials exists
     if not os.path.exists('./../../yen_gm_blogger_token.dat'):
- 
         flow = InstalledAppFlow.from_client_secrets_file('./../../yen_gm_blogger_secrets.json', SCOPES)
         credentials = flow.run_local_server()
- 
         with open('./../../yen_gm_blogger_token.dat', 'wb') as credentials_dat:
             pickle.dump(credentials, credentials_dat)
     else:
@@ -371,40 +363,20 @@ OAuth 2.0 client IDs 程式類別可以選擇 Desktop app
             credentials = pickle.load(credentials_dat)
     service = build('blogger', 'v3', credentials=credentials)
     g.es(service)</t>
-<t tx="leo.20200605162128.1">@language md
----
-Title: 網路管理課程W14
-Date: 2020-06-05
-Category: Misc
-Tags: NetworkManagementW14
-Slug: Network_ManagementW14
-Author: zyan
----
-
-五專網際內容管理W14
-
-&lt;!-- PELICAN_END_SUMMARY --&gt;
-
-新增 blogger 文章
+<t tx="leo.20200612140120.1">新增 blogger 文章
 ----
-
     '''
     用來測試 Google Blogger Python API 新增文章程式
-
     pip install google-api-python-client oauth2client
-
     '''
-
     import sys
     from oauth2client import client
     from googleapiclient import sample_tools
-
     argv = ""
     # 認證並建立服務
     service, flags = sample_tools.init(
         argv, 'blogger', 'v3', __doc__, './client_secrets.json',
         scope='https://www.googleapis.com/auth/blogger')
-
     try:
         users = service.users()
         # 取得使用者 profile 資料
@@ -417,18 +389,15 @@ Author: zyan
         print(blog['name'], blog['url'])
         posts = service.posts()
         # 新增網誌 post 時, 需要 blog id
- 
         body = {
         "kind": "blogger#post",
         "id": "123",
         "title": "透過 Python 程式新增網誌文章1",
         "content":"使用 Google Blogger API 可以利用程式新增網誌文章內容1"
         }
-     
         insert = posts.insert(blogId='123', body=body)
         posts_doc = insert.execute()
         print(posts_doc)
-     
         '''
         # 更新網誌文章時的 body
         body = {
@@ -436,7 +405,6 @@ Author: zyan
         "title": "透過 Python 程式修改網誌文章2",
         "content": "使用 Google Blogger API 可以利用程式修改網誌文章內容. http://mde.tw/cd2019"
         }
-     
         update = posts.update(blogId="123", postId="456", body=body, publish=True)
         update_doc = update.execute()
         print(update_doc)
@@ -444,6 +412,7 @@ Author: zyan
     except(client.AccessTokenRefreshError):
         print("error")
 </t>
+<t tx="leo.20200612151816.1"></t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
@@ -587,6 +556,5 @@ def domake():
 make = threading.Thread(target=domake)
 make.start()</t>
 <t tx="yen.20170224232341.1"></t>
-<t tx="yen.20170224232341.2"></t>
 </tnodes>
 </leo_file>

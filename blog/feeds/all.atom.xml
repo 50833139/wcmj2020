@@ -1,32 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>50833139 網際內容管理</title><link href="./" rel="alternate"></link><link href=".%5Cfeeds/all.atom.xml" rel="self"></link><id>./</id><updated>2020-06-05T00:00:00+08:00</updated><entry><title>網路管理課程W12-W13</title><link href=".%5CNetwork_ManagementW12W13.html" rel="alternate"></link><published>2020-06-05T00:00:00+08:00</published><updated>2020-06-05T00:00:00+08:00</updated><author><name>zyan</name></author><id>tag:None,2020-06-05:.\Network_ManagementW12W13.html</id><summary type="html">&lt;p&gt;五專網際內容管理W12-W13&lt;/p&gt;
-</summary><content type="html">&lt;p&gt;五專網際內容管理W12-W13&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>50833139 網際內容管理</title><link href="./" rel="alternate"></link><link href=".%5Cfeeds/all.atom.xml" rel="self"></link><id>./</id><updated>2020-06-05T00:00:00+08:00</updated><entry><title>網路管理課程W12-W13</title><link href=".%5CNetwork_ManagementW12W13.html" rel="alternate"></link><published>2020-06-05T00:00:00+08:00</published><updated>2020-06-05T00:00:00+08:00</updated><author><name>zyan</name></author><id>tag:None,2020-06-05:.\Network_ManagementW12W13.html</id><summary type="html">&lt;p&gt;五專網際內容管理W12-W13
+</summary><content type="html">&lt;p&gt;五專網際內容管理W12-W13
 
-
-&lt;p&gt;Pelican Blog 內容與 Google Blogger 同步&lt;/p&gt;
+Pelican Blog 內容與 Google Blogger 同步&lt;/p&gt;
 &lt;p&gt;利用 Windows 10 設定 -&amp;gt; 選擇預設網頁瀏覽器, 使用 Google Chrome 作為預設瀏覽器.&lt;/p&gt;
 &lt;p&gt;隨身程式系統必須安裝 google-api-python-client 與 oauth2client&lt;/p&gt;
 &lt;p&gt;pip install google-api-python-client oauth2client&lt;/p&gt;
 &lt;p&gt;OAuth 2.0 client IDs 程式類別可以選擇 Desktop app&lt;/p&gt;
 &lt;p&gt;使用者完成 client_secrets.json 設定後, 必須將檔案存在倉儲目錄外部&lt;/p&gt;
 &lt;p&gt;將 client_secrets.json 轉為 credential_token.dat 的程式:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nd"&gt;@language&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;
-&lt;span class="c1"&gt;# https://developers.google.com/blogger/docs/3.0/using&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# https://developers.google.com/blogger/docs/3.0/using&lt;/span&gt;
 &lt;span class="c1"&gt;# under Mac command + b to execute&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pickle&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;googleapiclient.discovery&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;build&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;google_auth_oauthlib.flow&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;InstalledAppFlow&lt;/span&gt;
-
-
 &lt;span class="n"&gt;SCOPES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;https://www.googleapis.com/auth/blogger&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt;
-
 &lt;span class="c1"&gt;# we check if the file tBo store the credentials exists&lt;/span&gt;
 &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exists&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;./../../yen_gm_blogger_token.dat&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-
     &lt;span class="n"&gt;flow&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;InstalledAppFlow&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;from_client_secrets_file&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;./../../yen_gm_blogger_secrets.json&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;SCOPES&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
     &lt;span class="n"&gt;credentials&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;flow&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run_local_server&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-
     &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;./../../yen_gm_blogger_token.dat&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;wb&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;credentials_dat&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
         &lt;span class="n"&gt;pickle&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dump&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;credentials&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;credentials_dat&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
@@ -34,28 +27,23 @@
         &lt;span class="n"&gt;credentials&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pickle&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;load&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;credentials_dat&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;service&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;build&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;blogger&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;v3&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;credentials&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;credentials&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;es&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;service&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Misc"></category><category term="NetworkManagementW12W13"></category></entry><entry><title>網路管理課程W14</title><link href=".%5CNetwork_ManagementW14.html" rel="alternate"></link><published>2020-06-05T00:00:00+08:00</published><updated>2020-06-05T00:00:00+08:00</updated><author><name>zyan</name></author><id>tag:None,2020-06-05:.\Network_ManagementW14.html</id><summary type="html">&lt;p&gt;五專網際內容管理W14&lt;/p&gt;
-</summary><content type="html">&lt;p&gt;五專網際內容管理W14&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Misc"></category><category term="NetworkManagementW12W13"></category></entry><entry><title>網路管理課程W14</title><link href=".%5CNetwork_ManagementW14.html" rel="alternate"></link><published>2020-06-05T00:00:00+08:00</published><updated>2020-06-05T00:00:00+08:00</updated><author><name>zyan</name></author><id>tag:None,2020-06-05:.\Network_ManagementW14.html</id><summary type="html">&lt;p&gt;五專網際內容管理W14
+</summary><content type="html">&lt;p&gt;五專網際內容管理W14
 
-
-&lt;h2&gt;新增 blogger 文章&lt;/h2&gt;
+新增 blogger 文章&lt;/p&gt;
+&lt;hr&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
 &lt;span class="sd"&gt;用來測試 Google Blogger Python API 新增文章程式&lt;/span&gt;
-
 &lt;span class="sd"&gt;pip install google-api-python-client oauth2client&lt;/span&gt;
-
 &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
-
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;oauth2client&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;client&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;googleapiclient&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;sample_tools&lt;/span&gt;
-
 &lt;span class="n"&gt;argv&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt;
 &lt;span class="c1"&gt;# 認證並建立服務&lt;/span&gt;
 &lt;span class="n"&gt;service&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;flags&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sample_tools&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;init&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;argv&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;blogger&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;v3&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="vm"&gt;__doc__&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;./client_secrets.json&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;scope&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;https://www.googleapis.com/auth/blogger&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
 &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="n"&gt;users&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;service&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;users&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
     &lt;span class="c1"&gt;# 取得使用者 profile 資料&lt;/span&gt;
@@ -68,18 +56,15 @@
     &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;url&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
     &lt;span class="n"&gt;posts&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;service&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;posts&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
     &lt;span class="c1"&gt;# 新增網誌 post 時, 需要 blog id&lt;/span&gt;
-
     &lt;span class="n"&gt;body&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="s2"&gt;&amp;quot;kind&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;blogger#post&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="s2"&gt;&amp;quot;id&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;123&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="s2"&gt;&amp;quot;title&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;透過 Python 程式新增網誌文章1&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="s2"&gt;&amp;quot;content&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;使用 Google Blogger API 可以利用程式新增網誌文章內容1&amp;quot;&lt;/span&gt;
     &lt;span class="p"&gt;}&lt;/span&gt;
-
     &lt;span class="n"&gt;insert&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;posts&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;insert&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;blogId&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;123&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;body&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;body&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
     &lt;span class="n"&gt;posts_doc&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;insert&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;execute&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
     &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;posts_doc&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
     &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
 &lt;span class="sd"&gt;    # 更新網誌文章時的 body&lt;/span&gt;
 &lt;span class="sd"&gt;    body = {&lt;/span&gt;
@@ -87,25 +72,28 @@
 &lt;span class="sd"&gt;    &amp;quot;title&amp;quot;: &amp;quot;透過 Python 程式修改網誌文章2&amp;quot;,&lt;/span&gt;
 &lt;span class="sd"&gt;    &amp;quot;content&amp;quot;: &amp;quot;使用 Google Blogger API 可以利用程式修改網誌文章內容. http://mde.tw/cd2019&amp;quot;&lt;/span&gt;
 &lt;span class="sd"&gt;    }&lt;/span&gt;
-
 &lt;span class="sd"&gt;    update = posts.update(blogId=&amp;quot;123&amp;quot;, postId=&amp;quot;456&amp;quot;, body=body, publish=True)&lt;/span&gt;
 &lt;span class="sd"&gt;    update_doc = update.execute()&lt;/span&gt;
 &lt;span class="sd"&gt;    print(update_doc)&lt;/span&gt;
 &lt;span class="sd"&gt;    &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
 &lt;span class="k"&gt;except&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AccessTokenRefreshError&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;error&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Misc"></category><category term="NetworkManagementW14"></category></entry><entry><title>電腦硬體</title><link href=".%5CPC_hardware.html" rel="alternate"></link><published>2020-06-05T00:00:00+08:00</published><updated>2020-06-05T00:00:00+08:00</updated><author><name>zyan</name></author><id>tag:None,2020-06-05:.\PC_hardware.html</id><summary type="html">&lt;p&gt;我真的不知道可以打什麼我才打這篇&lt;/p&gt;
-</summary><content type="html">&lt;p&gt;我真的不知道可以打什麼我才打這篇&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Misc"></category><category term="NetworkManagementW14"></category></entry><entry><title>電腦硬體</title><link href=".%5CPC_hardware.html" rel="alternate"></link><published>2020-06-05T00:00:00+08:00</published><updated>2020-06-05T00:00:00+08:00</updated><author><name>zyan</name></author><id>tag:None,2020-06-05:.\PC_hardware.html</id><summary type="html">&lt;p&gt;我真的不知道可以打什麼我才打這篇
+</summary><content type="html">&lt;p&gt;我真的不知道可以打什麼我才打這篇
 
-
-&lt;h2&gt;主機板&lt;/h2&gt;
-&lt;p&gt;主機板是使 PC 運作的核心。位於其上的 CPU 是所有其他硬體運作的樞紐。主機板好比大腦，將電源配送至需要的地方，與其他所有元件溝通協調，是電腦中最重要的硬體之一。&lt;/p&gt;
-&lt;h2&gt;RAM&lt;/h2&gt;
-&lt;p&gt;隨機存取記憶體或 RAM，是指一種安裝在主機板記憶體插槽內的硬體。RAM 的作用是暫時儲存由程式建立的使用中資訊，如此一來這些資料即可立即存取。&lt;/p&gt;
-&lt;h2&gt;硬碟&lt;/h2&gt;
+主機板&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;主機板是使 PC 運作的核心。位於其上的 CPU 是所有其他硬體運作的樞紐。主機板好比大腦，將電源配送至需要的地方，與其他所有元件溝通協調，是電腦中最重要的硬體之一。
+RAM&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;隨機存取記憶體或 RAM，是指一種安裝在主機板記憶體插槽內的硬體。RAM 的作用是暫時儲存由程式建立的使用中資訊，如此一來這些資料即可立即存取。
+硬碟&lt;/p&gt;
+&lt;hr&gt;
 &lt;p&gt;硬碟是一種儲存裝置，負責儲存永久性和暫時性資料。這些資料有諸多形式，但基本上是將其儲存或安裝至電腦中，例如電腦程式、家庭照片、作業系統、文書處理文件等等。
-有兩種不同類型的儲存裝置：傳統硬碟（HDD）和較新的固態硬碟（SSD）。傳統硬碟透過在高速旋轉磁碟（稱之為碟片）上寫入二進位資料，而固態硬碟透過靜態快閃記憶體晶片儲存資料。&lt;/p&gt;
-&lt;h2&gt;GPU&lt;/h2&gt;
-&lt;p&gt;GPU 如其名所述，負責處理大量批次的圖像資料，對 3D 算圖尤其重要。您會發現電腦的顯示卡至少有一個 GPU。與 PC 主機板所提供的基本內建顯示功能相反，專用顯示卡介面透過擴充插槽來與主機板連接，幾乎專為顯示算圖所用。這也表示若您想提升一些 PC 效能，可以透過升級顯示卡來完成。&lt;/p&gt;
-&lt;h2&gt;PSU&lt;/h2&gt;
+有兩種不同類型的儲存裝置：傳統硬碟（HDD）和較新的固態硬碟（SSD）。傳統硬碟透過在高速旋轉磁碟（稱之為碟片）上寫入二進位資料，而固態硬碟透過靜態快閃記憶體晶片儲存資料。
+GPU&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;GPU 如其名所述，負責處理大量批次的圖像資料，對 3D 算圖尤其重要。您會發現電腦的顯示卡至少有一個 GPU。與 PC 主機板所提供的基本內建顯示功能相反，專用顯示卡介面透過擴充插槽來與主機板連接，幾乎專為顯示算圖所用。這也表示若您想提升一些 PC 效能，可以透過升級顯示卡來完成。
+PSU&lt;/p&gt;
+&lt;hr&gt;
 &lt;p&gt;電源供應器通常縮寫成 PSU，其作用不僅是為電腦供電而已。此為電力從外部電源進入系統的切入點，並從主機板分配給各個硬體元件。不過，並非所有電源供應器皆相同，若 PSU 沒有足夠的瓦數，您的系統將無法正常運作。&lt;/p&gt;</content><category term="Misc"></category><category term="PChardware"></category></entry></feed>

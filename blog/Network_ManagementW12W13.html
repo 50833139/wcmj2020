@@ -223,33 +223,26 @@ init_mathjax();
         <article class="post">
         <div class="inner">
             <section class="post-content">
-                <p>五專網際內容管理W12-W13</p>
+                <p>五專網際內容管理W12-W13
 
-
-<p>Pelican Blog 內容與 Google Blogger 同步</p>
+Pelican Blog 內容與 Google Blogger 同步</p>
 <p>利用 Windows 10 設定 -&gt; 選擇預設網頁瀏覽器, 使用 Google Chrome 作為預設瀏覽器.</p>
 <p>隨身程式系統必須安裝 google-api-python-client 與 oauth2client</p>
 <p>pip install google-api-python-client oauth2client</p>
 <p>OAuth 2.0 client IDs 程式類別可以選擇 Desktop app</p>
 <p>使用者完成 client_secrets.json 設定後, 必須將檔案存在倉儲目錄外部</p>
 <p>將 client_secrets.json 轉為 credential_token.dat 的程式:</p>
-<div class="highlight"><pre><span></span><code><span class="nd">@language</span> <span class="n">python</span>
-<span class="c1"># https://developers.google.com/blogger/docs/3.0/using</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># https://developers.google.com/blogger/docs/3.0/using</span>
 <span class="c1"># under Mac command + b to execute</span>
 <span class="kn">import</span> <span class="nn">pickle</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">from</span> <span class="nn">googleapiclient.discovery</span> <span class="kn">import</span> <span class="n">build</span>
 <span class="kn">from</span> <span class="nn">google_auth_oauthlib.flow</span> <span class="kn">import</span> <span class="n">InstalledAppFlow</span>
-
-
 <span class="n">SCOPES</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;https://www.googleapis.com/auth/blogger&#39;</span><span class="p">,</span> <span class="p">]</span>
-
 <span class="c1"># we check if the file tBo store the credentials exists</span>
 <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;./../../yen_gm_blogger_token.dat&#39;</span><span class="p">):</span>
-
     <span class="n">flow</span> <span class="o">=</span> <span class="n">InstalledAppFlow</span><span class="o">.</span><span class="n">from_client_secrets_file</span><span class="p">(</span><span class="s1">&#39;./../../yen_gm_blogger_secrets.json&#39;</span><span class="p">,</span> <span class="n">SCOPES</span><span class="p">)</span>
     <span class="n">credentials</span> <span class="o">=</span> <span class="n">flow</span><span class="o">.</span><span class="n">run_local_server</span><span class="p">()</span>
-
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;./../../yen_gm_blogger_token.dat&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">credentials_dat</span><span class="p">:</span>
         <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">credentials</span><span class="p">,</span> <span class="n">credentials_dat</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
