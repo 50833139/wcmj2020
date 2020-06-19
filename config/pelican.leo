@@ -68,6 +68,9 @@
 <v t="leo.20200612140120.1"><vh>網路管理課程W14</vh></v>
 <v t="leo.20200612071937.1"><vh>6383690332952130761</vh></v>
 </v>
+<v t="leo.20200619152935.1"><vh>@clean 20200619.39.md</vh>
+<v t="leo.20200619153246.1"><vh>可攜程式環境</vh></v>
+</v>
 </v>
 </v>
 <v t="yen.20170108171733.83"><vh>產生 .key 與 .crt 指令</vh></v>
@@ -317,22 +320,29 @@ Author: zyan
 <t tx="leo.20200612071844.1"></t>
 <t tx="leo.20200612071937.1"></t>
 <t tx="leo.20200612072435.1"></t>
-<t tx="leo.20200612135945.1">主機板
+<t tx="leo.20200612135945.1">
+主機板
 ----
 主機板是使 PC 運作的核心。位於其上的 CPU 是所有其他硬體運作的樞紐。主機板好比大腦，將電源配送至需要的地方，與其他所有元件溝通協調，是電腦中最重要的硬體之一。
+
 RAM
 ----
 隨機存取記憶體或 RAM，是指一種安裝在主機板記憶體插槽內的硬體。RAM 的作用是暫時儲存由程式建立的使用中資訊，如此一來這些資料即可立即存取。
+
 硬碟
 ----
 硬碟是一種儲存裝置，負責儲存永久性和暫時性資料。這些資料有諸多形式，但基本上是將其儲存或安裝至電腦中，例如電腦程式、家庭照片、作業系統、文書處理文件等等。
 有兩種不同類型的儲存裝置：傳統硬碟（HDD）和較新的固態硬碟（SSD）。傳統硬碟透過在高速旋轉磁碟（稱之為碟片）上寫入二進位資料，而固態硬碟透過靜態快閃記憶體晶片儲存資料。
+
 GPU
 ----
 GPU 如其名所述，負責處理大量批次的圖像資料，對 3D 算圖尤其重要。您會發現電腦的顯示卡至少有一個 GPU。與 PC 主機板所提供的基本內建顯示功能相反，專用顯示卡介面透過擴充插槽來與主機板連接，幾乎專為顯示算圖所用。這也表示若您想提升一些 PC 效能，可以透過升級顯示卡來完成。
+
 PSU
 ----
-電源供應器通常縮寫成 PSU，其作用不僅是為電腦供電而已。此為電力從外部電源進入系統的切入點，並從主機板分配給各個硬體元件。不過，並非所有電源供應器皆相同，若 PSU 沒有足夠的瓦數，您的系統將無法正常運作。</t>
+電源供應器通常縮寫成 PSU，其作用不僅是為電腦供電而已。此為電力從外部電源進入系統的切入點，並從主機板分配給各個硬體元件。不過，並非所有電源供應器皆相同，若 PSU 沒有足夠的瓦數，您的系統將無法正常運作。
+
+原文網址 : &lt;a href="https://www.crucial.tw/articles/pc-builders/what-is-computer-hardware"&gt;https://www.crucial.tw/articles/pc-builders/what-is-computer-hardware&lt;/a&gt;</t>
 <t tx="leo.20200612140045.1">Pelican Blog 內容與 Google Blogger 同步
 
 利用 Windows 10 設定 -&gt; 選擇預設網頁瀏覽器, 使用 Google Chrome 作為預設瀏覽器.
@@ -415,6 +425,30 @@ OAuth 2.0 client IDs 程式類別可以選擇 Desktop app
         print("error")
 </t>
 <t tx="leo.20200612151816.1"></t>
+<t tx="leo.20200619152935.1">@language md
+---
+Title: 可攜程式環境
+Date: 2020-06-19
+Category: Misc
+Tags: ProtableSoftware
+Slug: Protable_Software
+Author: zyan
+---
+為了讓工程師可以在不同的 Windows 10 64 位元電腦上管理 CMSiMDE 網際內容管理系統, 因此需要 Python 解譯環境以及一個文字檔案的編輯器.
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+@others
+</t>
+<t tx="leo.20200619153246.1">這裡所安裝的 Python 解譯器選擇由 C 所編寫的 CPython, 可以從 &lt;a href="https://www.python.org/"&gt;https://www.python.org/&lt;/a&gt; 下載安裝. 但是在此我們要將 Python 解譯系統配置在 USB 隨身碟上, 使用者可以隨身攜帶, 一旦配置完成後, 可以在任何一台 Windows 10 64 位元的筆電或電腦上執行 Python 或 C 程式.
+
+可攜 Python 程式環境的建立步驟:
+----
+安裝 Python 套件時, 不要安裝 pip, 之後將 Python38 目錄複製到 data 目錄中, 然後建立 start.bat 指定使用可     攜系統中的 Python, 之後再利用 get-pip.py, 以命令列中的 python get-pip.py 安裝 pip.
+
+可攜 Tiny C 程式環境的建立步驟:
+----
+從 &lt;a href="https://bellard.org/tcc/"&gt;https://bellard.org/tcc/&lt;/a&gt; 下載 Tiny C, 將 tcc 解開壓縮後放到 data 目錄中. 然後修改 wscite 目錄中的 cpp.properties, 使用 Tiny C 類解譯 .c 程式.
+
+選用的文字編輯器: &lt;a href="https://www.scintilla.org/SciTE.html"&gt;https://www.scintilla.org/SciTE.html&lt;/a&gt;</t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/

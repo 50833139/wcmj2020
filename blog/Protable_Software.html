@@ -7,25 +7,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 
-  <title>50833139 網際內容管理 - Articles by zyan</title>
+  <title>可攜程式環境</title>
 
 
   <meta name="HandheldFriendly" content="True" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="referrer" content="origin" />
   <meta name="generator" content="Pelican" />
-  <link href="../" rel="canonical" />
+  <link href="./" rel="canonical" />
 
   <!-- Feed -->
         <link href="./feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="50833139 網際內容管理 Full Atom Feed" />
+          <link href="./feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="50833139 網際內容管理 Categories Atom Feed" />
 
-  <link href="../theme/css/style.css" type="text/css" rel="stylesheet" />
+  <link href="./theme/css/style.css" type="text/css" rel="stylesheet" />
 
   <!-- Code highlight color scheme -->
-      <link href="../theme/css/code_blocks/tomorrow_night.css" rel="stylesheet">
+      <link href="./theme/css/code_blocks/tomorrow_night.css" rel="stylesheet">
 
   
-    <link href="../theme/tipuesearch/tipuesearch.css" rel="stylesheet">
+    <link href="./theme/tipuesearch/tipuesearch.css" rel="stylesheet">
 
   <!-- Custom fonts -->
   <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
@@ -39,27 +40,49 @@
   <![endif]-->
 
 
+    <link href="./Protable_Software.html" rel="canonical" />
+
+        <meta name="description" content="為了讓工程師可以在不同的 Windows 10 64 位元電腦上管理 CMSiMDE 網際內容管理系統, 因此需要 Python 解譯環境以及一個文字檔案的編輯器.">
+
+        <meta name="author" content="zyan">
+
+        <meta name="tags" content="ProtableSoftware">
+
+
 
 
 <!-- Open Graph -->
 <meta property="og:site_name" content="50833139 網際內容管理"/>
-<meta property="og:type" content="blog"/>
-<meta property="og:title" content="50833139 網際內容管理"/>
-<meta property="og:description" content="View the blog."/>
+<meta property="og:title" content="可攜程式環境"/>
+<meta property="og:description" content="為了讓工程師可以在不同的 Windows 10 64 位元電腦上管理 CMSiMDE 網際內容管理系統, 因此需要 Python 解譯環境以及一個文字檔案的編輯器."/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="../"/>
-<meta property="og:image" content="../theme/images/home-bg.jpg">
+<meta property="og:url" content="./Protable_Software.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2020-06-19 00:00:00+08:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="./author/zyan.html">
+<meta property="article:section" content="Misc"/>
+<meta property="article:tag" content="ProtableSoftware"/>
+<meta property="og:image" content="./theme/images/post-bg.jpg">
 
 <!-- Twitter Card -->
 
 <script type="application/ld+json">
 {
-  "@context" : "http://schema.org",
-  "@type" : "Website",
-  "name": " 50833139 網際內容管理 ",
-  "url" : "../",
-  "image": "../theme/images/home-bg.jpg",
-  "description": "View the blog."
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "name": "可攜程式環境",
+  "headline": "可攜程式環境",
+  "datePublished": "2020-06-19 00:00:00+08:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "zyan",
+    "url": "./author/zyan.html"
+  },
+  "image": "./theme/images/post-bg.jpg",
+  "url": "./Protable_Software.html",
+  "description": "為了讓工程師可以在不同的 Windows 10 64 位元電腦上管理 CMSiMDE 網際內容管理系統, 因此需要 Python 解譯環境以及一個文字檔案的編輯器."
 }
 </script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
@@ -143,144 +166,110 @@ init_mathjax();
     <ul>
     <!--
 
-              <li role="presentation"><a href="../pages/about/">About</a></li>
+              <li role="presentation"><a href="./pages/about/">About</a></li>
       -->
 
-            <li><a href="../pages/about/index.html">About</span></a></li>
+            <li><a href="./pages/about/index.html">About</span></a></li>
             
-            <li><a href="../archives.html">Archives</span></a></li>
+            <li><a href="./archives.html">Archives</span></a></li>
             
-            <li><a href="../categories.html">Categories</span></a></li>
+            <li><a href="./categories.html">Categories</span></a></li>
             
-            <li><a href="../tags.html">Tags</span></a></li>
+            <li><a href="./tags.html">Tags</span></a></li>
 
     </ul>
   </div>
 </nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header id="blog-header" class="has-cover">
+    <header id="post-header" class="has-cover">
       <div class="inner">
         <nav id="navigation">
             <span id="home-button" class="nav-button">
-                <a class="home-button" href="../" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+                <a class="home-button" href="./index.html" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
             </span>
           <span id="menu-button" class="nav-button">
             <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
           </span>
         </nav>
-            <div class="post-cover cover" style="background-image: url('../theme/images/post-bg.jpg')">
+        <h1 class="post-title">可攜程式環境</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="./author/zyan.html">Zyan</a>
+            | <time datetime="週五 19 六月 2020">週五 19 六月 2020</time>
+        </span>
+        <!-- TODO : Modified check -->
+            <div class="post-cover cover" style="background-image: url('./theme/images/post-bg.jpg')">
       </div>
     </header>
-
-
 
   <section id="wrapper">
     <a class="hidden-close"></a>
 
 <section class="search">
-      <form class="navbar-search" action="../search.html">
+      <form class="navbar-search" action="./search.html">
       <input type="text"  placeholder="Search" name="q" id="tipue_search_input" required>
     </form>
 </section>
 
 
-<div id="index" class="container">
-  <main class="content" role="main">
-    <div class="extra-pagination">
-<nav class="pagination" role="pagination">
-  <div class="inner">
-    <span class="pagination-info">Page 1 / 1</span>
-    <div class="clear"></div>
-  </div>
-</nav>
-    </div>
-
+    <!-- Post content -->
+    <main class="content" role="main">
         <article class="post">
         <div class="inner">
-            <header class="post-header">         
-                <h2 class="post-title"><a href="../Protable_Software.html" rel="bookmark" title="Permalink to 可攜程式環境">可攜程式環境</a>
-                </h2>
-                <span class="post-meta">
-                        <a href="../author/zyan.html">Zyan</a>
-                     | <time datetime="週五 19 六月 2020">週五 19 六月 2020</time>
-                </span>
-                <div class="clear"></div>
-            </header>
-                <section class="post-excerpt">
-                    <p>
-                        <p>為了讓工程師可以在不同的 Windows 10 64 位元電腦上管理 CMSiMDE 網際內容管理系統, 因此需要 Python 解譯環境以及一個文字檔案的編輯器.
+            <section class="post-content">
+                <p>為了讓工程師可以在不同的 Windows 10 64 位元電腦上管理 CMSiMDE 網際內容管理系統, 因此需要 Python 解譯環境以及一個文字檔案的編輯器.
 
-                    </p>
+這裡所安裝的 Python 解譯器選擇由 C 所編寫的 CPython, 可以從 <a href="https://www.python.org/">https://www.python.org/</a> 下載安裝. 但是在此我們要將 Python 解譯系統配置在 USB 隨身碟上, 使用者可以隨身攜帶, 一旦配置完成後, 可以在任何一台 Windows 10 64 位元的筆電或電腦上執行 Python 或 C 程式.</p>
+<h2>可攜 Python 程式環境的建立步驟:</h2>
+<p>安裝 Python 套件時, 不要安裝 pip, 之後將 Python38 目錄複製到 data 目錄中, 然後建立 start.bat 指定使用可     攜系統中的 Python, 之後再利用 get-pip.py, 以命令列中的 python get-pip.py 安裝 pip.</p>
+<h2>可攜 Tiny C 程式環境的建立步驟:</h2>
+<p>從 <a href="https://bellard.org/tcc/">https://bellard.org/tcc/</a> 下載 Tiny C, 將 tcc 解開壓縮後放到 data 目錄中. 然後修改 wscite 目錄中的 cpp.properties, 使用 Tiny C 類解譯 .c 程式.</p>
+<p>選用的文字編輯器: <a href="https://www.scintilla.org/SciTE.html">https://www.scintilla.org/SciTE.html</a></p>
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=可攜程式環境&amp;url=./Protable_Software.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=./Protable_Software.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=./Protable_Software.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+                <aside class="post-tags">
+<a href="./tag/protablesoftware.html">ProtableSoftware</a>                </aside>
+
+                <div class="clear"></div>
+
+
                 </section>
+
+
+                <aside class="post-nav">
+                    <a class="post-nav-prev" href="./Network_ManagementW12W13.html">
+                        <section class="post-nav-teaser">
+                            <i class="ic ic-arrow-right"></i>
+                                <h2 class="post-nav-title">網路管理課程W12-W13</h2>
+                            <p class="post-nav-excerpt">五專網際內容管理W12-W13</p>
+                        </section>
+                    </a>
+                    <div class="clear"></div>
+                </aside>
+
             </div>
         </article>
-        <article class="post">
-        <div class="inner">
-            <header class="post-header">         
-                <h2 class="post-title"><a href="../Network_ManagementW12W13.html" rel="bookmark" title="Permalink to 網路管理課程W12-W13">網路管理課程W12-W13</a>
-                </h2>
-                <span class="post-meta">
-                        <a href="../author/zyan.html">Zyan</a>
-                     | <time datetime="週五 05 六月 2020">週五 05 六月 2020</time>
-                </span>
-                <div class="clear"></div>
-            </header>
-                <section class="post-excerpt">
-                    <p>
-                        <p>五專網際內容管理W12-W13
-
-                    </p>
-                </section>
-            </div>
-        </article>
-        <article class="post">
-        <div class="inner">
-            <header class="post-header">         
-                <h2 class="post-title"><a href="../Network_ManagementW14.html" rel="bookmark" title="Permalink to 網路管理課程W14">網路管理課程W14</a>
-                </h2>
-                <span class="post-meta">
-                        <a href="../author/zyan.html">Zyan</a>
-                     | <time datetime="週五 05 六月 2020">週五 05 六月 2020</time>
-                </span>
-                <div class="clear"></div>
-            </header>
-                <section class="post-excerpt">
-                    <p>
-                        <p>五專網際內容管理W14
-
-                    </p>
-                </section>
-            </div>
-        </article>
-        <article class="post">
-        <div class="inner">
-            <header class="post-header">         
-                <h2 class="post-title"><a href="../PC_hardware.html" rel="bookmark" title="Permalink to 電腦硬體">電腦硬體</a>
-                </h2>
-                <span class="post-meta">
-                        <a href="../author/zyan.html">Zyan</a>
-                     | <time datetime="週五 05 六月 2020">週五 05 六月 2020</time>
-                </span>
-                <div class="clear"></div>
-            </header>
-                <section class="post-excerpt">
-                    <p>
-                        <p>我真的不知道可以打什麼我才打這篇
-
-                    </p>
-                </section>
-            </div>
-        </article>
-
-<nav class="pagination" role="pagination">
-  <div class="inner">
-    <span class="pagination-info">Page 1 / 1</span>
-    <div class="clear"></div>
-  </div>
-</nav>
-  </main>
-</div>
+    </main>
       <!-- TODO : Body class -->
     <div id="body-class" style="display: none;" class=""></div>
 
@@ -296,7 +285,7 @@ init_mathjax();
     </footer>
   </section>
   
-  <script type="text/javascript" src="../theme/js/script.js"></script>
+  <script type="text/javascript" src="./theme/js/script.js"></script>
 
  
 
